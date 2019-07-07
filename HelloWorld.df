@@ -1,0 +1,4 @@
+FROM alpine:3.4
+RUN apk update && apk add openjdk-8-jre-headless
+
+CMD ["java test"]
