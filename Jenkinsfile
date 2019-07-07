@@ -8,6 +8,12 @@ pipeline {
 			}
 		}		
 
+		stage('Build java'){
+			steps{
+				sh label: '', script: 'docker build -t arulkarum/nginx:1.0  -f nginz.df .'
+			}
+		}
+
 	}
 
 }
