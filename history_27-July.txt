@@ -1,0 +1,183 @@
+    1  exit
+    2  ifco
+    3  ifconfig
+    4  yum install ifconfig
+    5  sudo -i
+    6  ipaddress
+    7  ipconfig
+    8  ip address show
+    9  sudo -i
+   10  sudo yum install git
+   11  sudo -i
+   12  sudo su
+   13  sudo su ravi
+   14  java --v
+   15  java v
+   16  java -v
+   17  dir
+   18  ls
+   19  vagrant status
+   20  sudo yum install java-1.8.0-openjdk -y devel
+   21  sudo -i
+   22  systemctl jenkins status
+   23  systemctl status jenkins
+   24  systemctl start jenkins
+   25  systemctl status jenkins
+   26  systemctl enable jenkins
+   27  sudo systemctl enable jenkins
+   28  ifconfig 
+   29  history 
+   30  cd /var/lib/jenkins/users/devmonkravi_7356088795339049645/
+   31  sudo cd /var/lib/jenkins/users/devmonkravi_7356088795339049645/
+   32  sudo -i
+   33  w
+   34  cat /etc/centos-release
+   35  sudo yum install -yyum-utils device-mapper-persistent-data lvm2
+   36  sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+   37  sudo yum-config-manager --add-repohttps://download.docker.com/linux/centos/docker-ce.repo
+   38  sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+   39  sudo yum install docker-ce docker-ce-cli containerd.io
+   40  sudo systemctl start docker
+   41  sudo docker run hello-world
+   42  sudo systemctl enable docker
+   43  sudo groupadd docker
+   44  sudo group -l
+   45  sudo group -ls
+   46  sudo group -h
+   47  cat /etc/group
+   48  sudo usermod -aG docker vagrant
+   49  cat /etc/group
+   50  sudo usermod -aG docker jenkins
+   51  cat /etc/group
+   52  w
+   53  sudo yum install unzip
+   54  sudo yum install ansible
+   55  history 
+   56  ls
+   57  vim Dockerfile
+   58  docker images
+   59  docker status
+   60  docker --help
+   61  docker stats
+   62  docker --version
+   63  git branch
+   64  ls
+   65  pwd
+   66  mkdir docker_exercise
+   67  ls
+   68  cd docker_exercise/
+   69  git clone https://github.com/devopsmonks/hello-world-java.git
+   70  git branch
+   71  git branch --list
+   72  cd hello-world-java/
+   73  ls
+   74  git checkout -b feature/rkatakam
+   75  git branch
+   76  vim dockerfile
+   77  cat dockerfile 
+   78  git status
+   79  git add .
+   80  git status
+   81  git commit -m "ravik dockerfile add"
+   82  git config
+   83  git config --global
+   84  ls -la
+   85  git status
+   86  git add .
+   87  git status
+   88  git cobfig --global
+   89  git config --global
+   90  git config
+   91  git config --global user.email "devopsmonksravi@gmail.com"
+   92  git config -l
+   93  git config --global user.name "devopsmonksravi"
+   94  git config -l
+   95  git add .
+   96  git status
+   97  git commit -m "ravik dockerfile add"
+   98  git branch
+   99  git push origin feature/rkatakam 
+  100  cd ..
+  101  pwd
+  102  ls
+  103  cd hello-world-java/
+  104  ls
+  105  docker build -t centos_docker_image: v1
+  106  docker build -t centos_docker_image:v1
+  107  docker build -t centos_docker_image:v1 .
+  108  dcoker images
+  109  docker images
+  110  docker --help
+  111  docker run -d -p 81:80 centos_docker_image:v1 
+  112  docker container
+  113  docker container -l
+  114  docker container list
+  115  cat dockerfile 
+  116  docker container list
+  117  docker stop 0f
+  118  docker container list
+  119  docker images
+  120  mv dockerfile Dockerfile
+  121  ls
+  122  docker build -t centos_docker_image:v1 .
+  123  docker container list
+  124  docker images
+  125  cat Dockerfile 
+  126  systemctl status docker
+  127  docker run -d -p 81:80 centos_docker_image:v1 
+  128  docker container list
+  129  ls
+  130  vim Dockerfile 
+  131  docker build -t centos_docker_image:v1 .
+  132  docker image -a
+  133  docker images -a
+  134  docker run -d -p 81:80 centos_docker_image:v1 
+  135  docker container list
+  136  docker stop b2
+  137  docker run -d -p 81:80 centos_docker_image:v1 
+  138  docker container list
+  139  history 
+  140  history | less
+  141  docker login
+  142  docker --help
+  143  docker push centos_docker_image:v1 
+  144  docker push 
+  145  docker push --help
+  146  docker push devopsmonksravi/myfirstdockerimage
+  147  docker push devopsmonksravi/myfirstdockerimage:1
+  148  ls
+  149  docker image
+  150  docker images
+  151  docker push devopsmonksravi/centos_docker_image:v1
+  152  docker images
+  153  docker tag centos_docker_image:v1 devopsmonksravi/centos_docker_image:v1
+  154  docker push devopsmonksravi/centos_docker_image:v1
+  155  history 
+  156  cat /home/username/.docker/config.json
+  157  docker images
+  158  git branch
+  159  systemctl status jenkins
+  160  cd /var/lib/jenkins/users/devmonkravi_7356088795339049645/
+  161  sudo cd /var/lib/jenkins/users/devmonkravi_7356088795339049645/
+  162  cat /var/lib/jenkins/userContent/readme.txt 
+  163  sudo cd /var/lib/jenkins/userContent/
+  164  cd /var/lib/jenkins/userContent/
+  165  ls
+  166  cat readme.txt 
+  167  ls -a
+  168  sudo -i
+  169  pwd
+  170  sud -i
+  171  sudo -i
+  172  history | grep clone
+  173  cd
+  174  git branch
+  175  cd docker_exercise/hello-world-java/
+  176  git branch
+  177  ls
+  178  pwd
+  179  git branch
+  180  git pull
+  181  git branch
+  182  vim Jenkisfile
+  183  history >> history.txt

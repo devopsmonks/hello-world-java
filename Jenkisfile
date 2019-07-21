@@ -1,0 +1,10 @@
+pipeline 
+{
+	stages{
+		stage ('git clone') {
+
+			checkout([$class: 'GitSCM', branches: [[name: 'feature/rkatakam']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/devopsmonks/hello-world-java.git']]])
+				
+				}
+		}
+}
