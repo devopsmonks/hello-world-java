@@ -11,7 +11,7 @@ pipeline
 		stage ('build docker image') {
 			steps{
 				echo 'Building Docker image'
-				sh label: '', script: 'docker build -t devopsmonksravi/centos_docker_image:v1'
+				sh label: '', script: 'docker build -t devopsmonksravi/centos_docker_image:v1 .'
 				}
 				}		
 		}
