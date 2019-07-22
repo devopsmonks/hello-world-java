@@ -1,4 +1,3 @@
-
 pipeline {
 agent any
 
@@ -12,7 +11,7 @@ agent any
       stage('Build DockerImage') {
           steps {
               echo 'Building docker image..'
-			  sh label: '', script: 'docker build -t asreera/firstdockerimg:v1 .'
+              sh label: '', script: 'docker build -t asreera/firstdockerimg:v1 .'
           }
       }
       stage('push DockerImage') {
@@ -21,5 +20,4 @@ agent any
           }
       }
   }
- }
 }
