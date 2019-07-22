@@ -1,3 +1,4 @@
+
 pipeline {
 agent any
 
@@ -8,15 +9,17 @@ agent any
 			  checkout([$class: 'GitSCM', branches: [[name: 'feature/helloWorldarv']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'GIT_CREDENTIALS', url: 'https://github.com/devopsmonks/hello-world-java.git']]])
 				}
 	  }
-      stage('Test') {
+      stage('Build DockerImage') {
           steps {
-              echo 'Testing..'
+              echo 'Building docker image..'
+			  sh label: '', script: 'docker build -t asreera/firstdockerimg:v1 .'
           }
       }
-      stage('Deploy') {
+      stage('push DockerImage') {
           steps {
               echo 'Deploying....'
           }
       }
   }
+ }
 }
