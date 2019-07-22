@@ -1,7 +1,2 @@
-FROM alpine-java
+FROM openjdk:8-alpine
 
-RUN apk add --no-cache nginx
-
-RUN mkdir /run/nginx
-
-CMD ["nginx", "-g", "daemon off;"]
