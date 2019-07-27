@@ -1,20 +1,20 @@
 pipeline {
   agent any
   stages {
-      stage(‘Git Clone’) {
+      stage('Git Clone') {
           steps {
-              echo ‘Building..’
+              echo 'Cloning..'
               checkout([$class: 'GitSCM', branches: [[name: 'feature/vamsi']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/devopsmonks/hello-world-java.git']]])
           }
       }
-      stage(‘Test’) {
+      stage('Test') {
           steps {
-              echo ‘Testing..’
+              echo 'Testing..'
           }
       }
-      stage(‘Deploy’) {
+      stage('Deploy') {
           steps {
-              echo ‘Deploying....’
+              echo 'Deploying....'
           }
       }
   }
