@@ -1,70 +1,16 @@
-pipeline{
+pipeline {
+	agent any
 
-
-stages {
-peline{
-
-
-stages {
-
-state{'git Clone'}
-
-
-checkout([$class: 'GitSCM', branches: [[name: '*/master']], browser: [$class: 'GithubWeb', repoUrl: 'https://github.com/devopsmonks/hello-world-java.git'], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '8706a5c4-d360-477b-bcb7-1addfab45d62', url: 'https://github.com/devopsmonks/hello-world-java.git']]])
-
-
+	stages {
+		stage('Git Clone') {
+			steps {
+				checkout([$class: 'GitSCM', branches: [[name: 'feature/teja']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'GIT_CREDENTIALS', url: "https://github.com/devopsmonks/hello-world-java.git"]]])
+			}
+		}
+		stage('Docker Build') {
+			steps {
+				sh label: '', script: 'docker build . -t chakrateja/firstdocker:v2'
+			}
+		}
+	}
 }
-
-
-}
-
-
-
-
-
-}
-
-
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-
-
-state{'git Clone'}
-
-
-checkout([$class: 'GitSCM', branches: [[name: '*/master']], browser: [$class: 'GithubWeb', repoUrl: 'https://github.com/devopsmonks/hello-world-java.git'], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '8706a5c4-d360-477b-bcb7-1addfab45d62', url: 'https://github.com/devopsmonks/hello-world-java.git']]])
-
-
-}
-
-
-}
-
-
-
-
-
-}
-
-
