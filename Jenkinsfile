@@ -11,7 +11,7 @@ pipeline {
        stage('Build') {
            steps {
                echo 'Building..'
-		sh label: '', script: 'docker build . -t chakraguntur/my-JavaApp:v1'
+		sh label: '', script: 'docker build . -t chakraguntur/my-javaapp:v3'
            }
        }
        }
