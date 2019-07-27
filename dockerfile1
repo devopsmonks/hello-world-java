@@ -1,0 +1,16 @@
+#creating my first docker file
+#downloading an apline linux image from the docker repositry
+FROM alpine:3.4
+
+#running package manager to download the niginx webserver which isn alpine linux related
+
+RUN apk add --no-cache nginx
+
+#creating a directory 
+RUN mkdir /run/nginx
+
+#running a default command as part of container creation. Below command is in JSON format
+CMD ["nginx", "-g", "daemon off;"]
+
+
+
