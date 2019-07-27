@@ -1,5 +1,7 @@
-pipeline { agennsfilt any
-  stages {
+pipeline { 
+
+agent any 
+
       stage('Git Clone') {
           steps {
               echo 'Cloning hello world project..'
