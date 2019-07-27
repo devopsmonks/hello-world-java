@@ -1,14 +1,11 @@
-pipeline{
-
-	stages {
-		
-		stage('Git Clone') {
+pipeline {
+  agent any   stages {
+      stage('GIT CLONE') {
+          steps {
+              echo 'Cloning hello world project...'
 checkout([$class: 'GitSCM', branches: [[name: 'feature/BukkaS']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '096503bc-33dc-403d-80ec-a25976624656', url: 'https://github.com/devopsmonks/hello-world-java.git']]])
 
-			}		
-
-		}
-
-git clone https://github.com/devopsmonks/hello-world-java.git
-
+          }
+      }
+   }
 }
