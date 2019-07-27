@@ -1,11 +1,12 @@
 pipeline {
-
+agent any
+	
   stages {
       stage(‘Clone’) {
          
               echo ‘Cloning the git repository..’
 			  checkout([$class: 'GitSCM', branches: [[name: 'feature/helloWorldarv']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'GIT_CREDENTIALS', url: 'https://github.com/devopsmonks/hello-world-java.git']]])
-			  checkout([$class: 'GitSCM', branches: [[name: 'feature/helloWorldarv']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'GIT_CREDENTIALS', url: 'https://github.com/devopsmonks/hello-world-java.git']]])
+			  
       }
       stage(‘Test’) {
           steps {
