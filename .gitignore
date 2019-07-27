@@ -4,3 +4,4 @@
 .project
 .settings
 Jenkinsfile_no_credentials
+/home/vagrant/Docker/hello-world-java/Dockerfile_nginx
