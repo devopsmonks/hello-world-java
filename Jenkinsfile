@@ -1,13 +1,22 @@
-pipeline {
-  agent any
+pipeline { agennsfilt any
   stages {
       stage('Git Clone') {
           steps {
               echo 'Cloning hello world project..'
-checkout([$class: 'GitSCM', branches: [[name: 'feature/sireeshad']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/devopsmonks/hello-world-java.git']]])
+eckout([$class: 'GitSCM', branches: [[name: 'feature/sireeshad']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'Git_Credentals', url: 'https://github.com/devopsmonks/hello-world-java.git']]])
 
   
           }
       }
+
+	stage ('Build Image') {
+
+	steps{
+		echo 'Building Docker Image,,'
+      sh label: '', script: 'docker build -t dockerepo/dockerimage1:v1 .'
+
+	}
+}
+
   }
 }
