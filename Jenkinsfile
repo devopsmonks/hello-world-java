@@ -1,15 +1,11 @@
-pipeline{
-
-	stages {
-
-		stage('Git Clone') {
-checkout([$class: 'GitSCM', branches: [[name: 'feature/ravi']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'myGitDocker', url: 'https://github.com/devopsmonks/hello-world-java.git']]])
-
+pipeline {
+  agent any
+  stages {
+      stage('Git Clone') {
+          steps {
+              echo 'Cloning hello world project..'
+	      checkout([$class: 'GitSCM', branches: [[name: 'feature/ravi']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'myGitDocker', url: 'https://github.com/devopsmonks/hello-world-java.git']]])
+          }
+      }
+  }
 }
-
-
-}
-}
-
-
-
