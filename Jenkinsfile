@@ -11,7 +11,7 @@ pipeline {
       stage('Build Image') {
 	steps {
 		echo 'Building docker image'
-		sh label: '', script: 'docker build -t devopsmonks/myJavaApp:1.0 .'
+		sh label: '', script: 'docker build -t devopsmonks/myjavaapp:1.0 .'
 	}
       }
 
