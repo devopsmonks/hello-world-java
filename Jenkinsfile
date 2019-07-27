@@ -10,8 +10,8 @@ pipeline {
        stage('Build Image') {
         steps{
               echo 'Building Docker Image'
-              sh label: '', script: 'docker build -t raytestrepo/rayimage:v1'
-              }
+            sh label: '', script: 'docker build -t raytestrepo/rayimage:v1 .'              
+             }
                              }                
        }
 }
