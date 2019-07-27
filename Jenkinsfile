@@ -10,21 +10,5 @@ pipeline {
                checkout([$class: 'GitSCM', branches: [[name: 'feature/chakra']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'GIT_Credentials', url: 'https://github.com/devopsmonks/hello-world-java.git']]])
            }
        }
-       stage('Build') {
-           steps {
-               echo 'Building..'
-           }
-       }
-       stage('Test') {
-           steps {
-               echo 'Testing..'
-           }
-       }
-       stage('Deploy') {
-           steps {
-               echo 'Deploying....'
-           }
-       }
-   }
 }
 
