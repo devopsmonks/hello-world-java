@@ -8,6 +8,12 @@ pipeline {
                echo 'Checking out..'
            checkout([$class: 'GitSCM', branches: [[name: 'feature/chakrag']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'GIT_Credentials', url: 'https://github.com/devopsmonks/hello-world-java.git']]])
          }
+       stage('Build') {
+           steps {
+               echo 'Building..'
+		sh label: '', script: 'docker build . -t chakraguntur/my-JavaApp:v1'
+           }
+       }
        }
 }
 }
